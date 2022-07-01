@@ -4,43 +4,6 @@ Contributions are licensed on a license-in/license-out basis.
 
 # Contributing Guide
 
-## Set up your environment
-
-This project uses [Poetry](https://python-poetry.org/) for dependency management, tests, and linting.
-
-1. Clone this respository
-2. Run `poetry install` 
-
-### Unit Tests
-
-We use [Pytest](https://docs.pytest.org/en/7.1.x/) as our test runner. Invoke it with `poetry run pytest`, all other arguments are passed directly to `pytest`.
-
-#### All tests
-```bash
-poetry run pytest tests
-```
-
-#### Only a specific test file
-
-```bash
-poetry run pytest tests/tests.py
-```
-
-#### Only a specific method
-
-```bash
-poetry run pytest tests/tests.py::ClientTestSuite::test_closing_connection_closes_commands
-```
-
-### Code formatting
-
-This project uses [Black](https://pypi.org/project/black/).
-
-```
-poetry run black src
-```
-
-
 ## Communication
 Before starting work on a major feature, please reach out to us via GitHub, Slack, email, etc. We will make sure no one else is already working on it and ask you to open a GitHub issue.
 A "major feature" is defined as any change that is > 100 LOC altered (not including tests), or changes any user-facing behavior.
@@ -105,3 +68,39 @@ Use your real name (sorry, no pseudonyms or anonymous contributions.)
 ```
 
 If you set your `user.name` and `user.email` git configs, you can sign your commit automatically with git commit -s.
+
+## Set up your environment
+
+This project uses [Poetry](https://python-poetry.org/) for dependency management, tests, and linting.
+
+1. Clone this respository
+2. Run `poetry install` 
+
+### Unit Tests
+
+We use [Pytest](https://docs.pytest.org/en/7.1.x/) as our test runner. Invoke it with `poetry run pytest`, all other arguments are passed directly to `pytest`.
+
+#### All tests
+```bash
+poetry run pytest tests
+```
+
+#### Only a specific test file
+
+```bash
+poetry run pytest tests/tests.py
+```
+
+#### Only a specific method
+
+```bash
+poetry run pytest tests/tests.py::ClientTestSuite::test_closing_connection_closes_commands
+```
+
+### Code formatting
+
+This project uses [Black](https://pypi.org/project/black/).
+
+```
+poetry run black src
+```
