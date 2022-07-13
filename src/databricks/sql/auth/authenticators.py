@@ -25,7 +25,9 @@ from databricks.sql.auth.oauth import get_tokens, check_and_refresh_access_token
 import base64
 
 
-class Authenticator:
+# Private API: this is an evolving interface and it will change in the future.
+# Please must not depend on it in your applications.
+class CredentialsProvider:
     def add_auth_token(self, request_headers):
         pass
 
