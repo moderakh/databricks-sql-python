@@ -1,7 +1,22 @@
 # Release History
 
-## 2.x.x (Unreleased)
+## 2.0.x (Unreleased)
 
+## 2.0.5 (2022-08-23)
+
+- Fix: closing a connection now closes any open cursors from that connection at the server
+- Other: Add project links to pyproject.toml (helpful for visitors from PyPi)
+
+## 2.0.4 (2022-08-17)
+
+- Add support for Python 3.10
+- Add unit test matrix for supported Python versions
+
+Huge thanks to @dbaxa for contributing this change!
+
+## 2.0.3 (2022-08-05)
+
+- Add retry logic for `GetOperationStatus` requests that fail with an `OSError`
 - Reorganised code to use Poetry for dependency management.
 ## 2.0.2 (2022-05-04)
 - Better exception handling in automatic connection close
